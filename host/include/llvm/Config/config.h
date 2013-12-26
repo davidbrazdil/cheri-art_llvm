@@ -238,7 +238,7 @@
 /* #undef HAVE_MACH_O_DYLD_H */
 
 /* Define if mallinfo() is available on this platform. */
-#if !defined(__APPLE__)
+#if !defined(__APPLE__) && !defined(OS_FREEBSD)
 #define HAVE_MALLINFO 1
 #else
 /* #undef HAVE_MALLINFO */
@@ -276,7 +276,7 @@
 
 /* Define if mmap() uses MAP_ANONYMOUS to map anonymous pages, or undefine if
    it uses MAP_ANON */
-#if !defined(__APPLE__)
+#if !defined(__APPLE__) && !defined(OS_FREEBSD)
 #define HAVE_MMAP_ANONYMOUS
 #else
 /* #undef HAVE_MMAP_ANONYMOUS */
