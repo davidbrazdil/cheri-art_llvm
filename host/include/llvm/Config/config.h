@@ -144,7 +144,7 @@
 /* Define to 1 if you have the `fmodf' function. */
 #define HAVE_FMODF 1
 
-#ifdef __APPLE__
+#if defined(__APPLE__) || defined(OS_FREEBSD)
 /* Define to 1 if you have the `futimes' function. */
 #define HAVE_FUTIMES 1
 #else
